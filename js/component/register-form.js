@@ -36,6 +36,10 @@ $template.innerHTML=/*html*/`
                         </div>
                         <form action="" id="register-form">
                             <div class="form-group mb-3">
+                                <label class="label" for="name">Your Name</label>
+                                <input-wrapper id="name" type="text" placeholder="Your name..."></input-wrapper>
+                            </div>
+                            <div class="form-group mb-3">
                                 <label class="label" for="name">Username</label>
                                 <input-wrapper id="username" type="email" placeholder="User name..."></input-wrapper>
                             </div>
@@ -71,6 +75,7 @@ export default class Register extends HTMLElement{
         this.$password =this.shadowRoot.getElementById('password');
         this.$confirm =this.shadowRoot.getElementById('confirm-password');
         this.$login =this.shadowRoot.getElementById('login-form');
+        this.$name=this.shadowRoot.getElementById('name');
     }
 
     connectedCallback(){
@@ -90,6 +95,7 @@ export default class Register extends HTMLElement{
             }
 
             let isPassed=
+            (this.$name.validate(checkNull,"Your name null"))
             (this.$username.validate(validateEmail,"Please input an email")&&
             this.$username.validate(checkNull,"Email null"))
             &(this.$password.validate(checkNull,"Password null")&&

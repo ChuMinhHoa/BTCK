@@ -36,7 +36,7 @@ video::-webkit-media-controls {
     background: linear-gradient(135deg, rgb(255, 136, 1) 0%, rgb(255, 195, 127) 100%);
 }
 .ftco-section{
-    padding: 7em 0;
+    padding: 3em 0;
 }
 .fa-facebook{
     content: "\f09a";
@@ -123,5 +123,6 @@ input[type="file"]{
 .label-for-img{
     color: white;
 }
+
 
 

@@ -5,7 +5,7 @@ $template.innerHTML=/*html*/`
 <div class="row" id="div-video-wrapper">
     
 </div>`;
-export default class VideoForm extends HTMLElement {
+export default class VideoFormRight extends HTMLElement {
     
     constructor(){
         super();
@@ -25,7 +25,7 @@ export default class VideoForm extends HTMLElement {
             $video_wrapper.setAttribute('videoname',_name)
             $video_wrapper.setAttribute('videosrc',_link) 
             $video_wrapper.setAttribute('imgsrc',_linkImg) 
-            $video_wrapper.classList+="col-4";     
+            $video_wrapper.classList+="col-12";     
             this.$wrapper.appendChild($video_wrapper);   
         }
     }
@@ -33,4 +33,4 @@ export default class VideoForm extends HTMLElement {
         this.loadVideoFromFireBase();
     }
 }
-window.customElements.define("video-form",VideoForm);
+window.customElements.define("video-form-right",VideoFormRight);

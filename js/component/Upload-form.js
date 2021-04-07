@@ -28,7 +28,7 @@ integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwr
         <span></span>
         <span></span>
     </div>
-    <h1>Redirecting</h1>
+    <h1>Uploading...</h1>
 </div>
 </div> 
 <div class="p-3">
@@ -212,7 +212,6 @@ export default class UploadForm extends HTMLElement {
         }
         this.$videoUpload.onchange=()=>{
             this.loadVideo();
-            console.log("dd");
         }
 
     }

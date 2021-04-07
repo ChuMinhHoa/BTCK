@@ -25,7 +25,7 @@ body {
     top: 0;
     left: 0;
     background: linear-gradient(135deg, rgb(255, 136, 1), rgb(230, 230, 230) 100%);
-    overflow-x: hidden;
+    overflow: hidden;
     transition: 0.5s;
     padding-top: 60px;
 
