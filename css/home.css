@@ -120,3 +120,23 @@ body {
    width: 60px;
    clip-path: circle(50% at 50% 50%);
  }
+ 
+ .avataProfile{
+   height: 200px;
+   width: 200px;
+   clip-path: circle(50% at 50% 50%);
+
+ }
+
+ .profile-form{
+   text-align: center;
+ }
+
+ .profile-form p{
+   font-size: 30px;
+}
+
+.content-profile{
+  margin-left: 30px;
+  color:rgb(255, 136, 1)
+}
