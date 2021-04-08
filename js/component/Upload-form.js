@@ -41,7 +41,7 @@ integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwr
                     <input-wrapper id="video-name" type="text" placeholder="Video name..."></input-wrapper>
                 </div>
                 <div class="form-group d-flex">
-                    <label class="label w-50">Choose video image</label>
+                    <label class="label w-50">Choose video</label>
                     <div class="d-flex justify-content-end w-50">
                         <input type="file" id="up-load-video" accept="video/*">
                         <label for="up-load-video" class="label-for-img btn btn-primary fix form-control d-flex justify-content-center align-items-center"
