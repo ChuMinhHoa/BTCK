@@ -19,10 +19,11 @@ export async function login(_username,_password){
         alert("Wrong username.");
     }
 }
-export async function register(_username,_password,errorFuction){
+export async function register(_name,_username,_password,errorFuction){
     let datas=await firebase.firestore().collection('User').where("userName","==",_username).get();
     if (datas.empty) {
         await firebase.firestore().collection('User').add({
+            name:_name,
             userName:_username,
             passWords:md5_password(_password),
             token: ""

@@ -91,7 +91,7 @@ integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwr
                 </div>
                 <div class="form-group">
                     <div class="d-flex justify-content-center">
-                        <button class="btn btn-primary fix form-control w-50 label">Upload video</button>
+                        <a href="#/home"><button class="btn btn-primary fix form-control w-100 label">Upload video</button></a>
                     </div>
                 </div>
             </form>
@@ -138,6 +138,7 @@ export default class UploadForm extends HTMLElement {
             this.$videochoosen.innerHTML=file.name
         })
         reader.readAsDataURL(file);
+        
     }
     async uploadVideo() {
         let ref = firebase.storage().ref();
@@ -167,6 +168,11 @@ export default class UploadForm extends HTMLElement {
 
             let _linkImage;
             let _videoLink;
+
+            let _userID;
+
+            let re=await firebase.firestore().collection('User').where("token","==",localStorage.getItem("token")).get();
+            _userID = re.docs[0].id;
             
             this.$loadScreen.style.display="block";
             const task = ref.child(nameImg).put(fileImg, metaData)
@@ -184,7 +190,7 @@ export default class UploadForm extends HTMLElement {
                 linkVideo: _videoLink,
                 linkImage: _linkImage,
                 typeID: _idTypeVideo,
-                userID: ''
+                userID: _userID
             })
             this.$loadScreen.style.display="none";
             router.navigate('/home');

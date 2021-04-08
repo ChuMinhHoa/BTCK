@@ -83,6 +83,7 @@ export default class Register extends HTMLElement{
         this.$form.onsubmit=(event)=>{
             event.preventDefault();
             let username=this.$username.value;
+            let name=this.$name.value;
             let password=this.$password.value;
 
             let usernameErr=this.$username;
@@ -95,7 +96,7 @@ export default class Register extends HTMLElement{
             }
 
             let isPassed=
-            (this.$name.validate(checkNull,"Your name null"))
+            (this.$name.validate(checkNull,"Your name null"))&&
             (this.$username.validate(validateEmail,"Please input an email")&&
             this.$username.validate(checkNull,"Email null"))
             &(this.$password.validate(checkNull,"Password null")&&
@@ -103,7 +104,7 @@ export default class Register extends HTMLElement{
             &(this.$confirm.validate(confirm,"Wrong confirm password")&&
             this.$confirm.validate(checkNull,"Confirm password null"))
             if (isPassed) {
-                register(username,password,errorFuction);  
+                register(name,username,password,errorFuction);  
             } 
         }
         this.$login.onsubmit=(event)=>{
