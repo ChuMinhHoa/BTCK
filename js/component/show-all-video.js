@@ -36,7 +36,7 @@ $template.innerHTML=/*html */
             <div class="container-fluid">
                 <span style="font-size:25px;cursor:pointer" id="open">&#9776;</span>
                 <form class="d-flex">
-                    <input class="form-control me-2 nav" type="search" placeholder="Search..." aria-label="Search">
+                    <input class="form-control me-2 nav" style="background:white;" type="search" placeholder="Search..." aria-label="Search">
                     <button class="btn btn-outline-warning search" type="submit">Search</button>
                 </form>
             </div>

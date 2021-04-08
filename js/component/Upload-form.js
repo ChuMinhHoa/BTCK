@@ -193,6 +193,7 @@ export default class UploadForm extends HTMLElement {
                 userID: _userID
             })
             this.$loadScreen.style.display="none";
+            alert("Up load done.")
             router.navigate('/home');
         }
     }
